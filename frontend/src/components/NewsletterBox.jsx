@@ -1,4 +1,4 @@
-const NewsletterBox = () => {
+const NewsLetterBox = () => {
   const onSubmitHandler = (event) => {
     event.preventDefault();
   };
@@ -32,4 +32,4 @@ const NewsletterBox = () => {
   );
 };
 
-export default NewsletterBox;
+export default NewsLetterBox;
