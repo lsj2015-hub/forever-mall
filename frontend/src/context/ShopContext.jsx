@@ -12,7 +12,7 @@ const ShopContextProvider = (props) => {
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const [search, setSearch] = useState('');
   const [showSearch, setShowSearch] = useState(true);
-  const [cartItems, setcartItems] = useState({});
+  const [cartItems, setCartItems] = useState({});
   const [products, setProducts] = useState([]);
   const [token, setToken] = useState('');
   const navigate = useNavigate();
@@ -36,7 +36,7 @@ const ShopContextProvider = (props) => {
       cartData[itemId][size] = 1;
     }
 
-    setcartItems(cartData);
+    setCartItems(cartData);
 
     if (token) {
       try {
@@ -76,7 +76,7 @@ const ShopContextProvider = (props) => {
 
     cartData[itemId][size] = quantity;
 
-    setcartItems(cartData);
+    setCartItems(cartData);
 
     if (token) {
       try {
@@ -139,7 +139,7 @@ const ShopContextProvider = (props) => {
       );
 
       if (response.data.success) {
-        setcartItems(response.data.cartData);
+        setCartItems(response.data.cartData);
       }
     } catch (error) {
       console.log(error);
@@ -168,6 +168,7 @@ const ShopContextProvider = (props) => {
     setShowSearch,
     cartItems,
     addToCart,
+    setCartItems,
     getCartCount,
     updateQuantity,
     getCartAmount,
