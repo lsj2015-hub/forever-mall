@@ -1,6 +1,6 @@
 import { assets } from '../assets/assets';
-import NewsLetterBox from '../components/NewsLetterBox';
 import Title from '../components/Title';
+import NewsLetterBox from '../components/NewsLetterBox';
 
 const Contact = () => {
   return (
@@ -12,7 +12,7 @@ const Contact = () => {
         <img
           src={assets.contact_img}
           alt=""
-          className="w0full md:max-w-[480px]"
+          className="w-full md:max-w-[480px]"
         />
         <div className="flex flex-col justify-center items-start gap-6">
           <p className="font-semibold text-xl text-gray-600">Our Store</p>
@@ -29,7 +29,7 @@ const Contact = () => {
             Learn more about our teams and job openings.
           </p>
           <button className="border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500">
-            EXplore Jobs
+            Explore Jobs
           </button>
         </div>
       </div>
